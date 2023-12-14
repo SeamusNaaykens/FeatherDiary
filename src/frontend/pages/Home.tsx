@@ -11,9 +11,22 @@ export const Home = () => {
     return (
         <main>
             <Header></Header>
-            <Grid>
+            <Grid backgroundColor='#EEF0E5'>
+                <Box display='flex' justifyContent='center'>
+                    <Heading as='h1' color='#163020'> Welcome to your FeatherDiary!</Heading>
+                </Box>
                 <Box>
-                    <Heading> Welcome to your FeatherDiary</Heading>
+                    <Grid gap='2rem'>
+                        <Box padding='3rem' border='1px solid #163020'>
+                            <Heading as='h2' color='#163020'>FeatherDiary</Heading>
+                        </Box>
+                        <Box padding='3rem' border='1px solid #163020'>
+                            <Heading as='h2' color='#163020'>BucketList</Heading>
+                        </Box>
+                        <Box padding='3rem' border='1px solid #163020'>
+                            <Heading as='h2' color='#163020'>Achievements</Heading>
+                        </Box>
+                    </Grid>
                 </Box>
             </Grid>
         </main>
