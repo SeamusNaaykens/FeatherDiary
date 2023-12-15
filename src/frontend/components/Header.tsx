@@ -15,7 +15,7 @@ export const Header = () => {
 
   return (
     <div>
-      <Grid backgroundColor='#304D30' p='1rem' display='flex' justifyContent='space-between' alignItems='center'>
+      <Grid backgroundColor='#304D30' p='3rem' display='flex' justifyContent='space-between' alignItems='center'>
         <Box>
           <Link to={'/'}>
             <Heading as='h1' color='#B6C4B6'>FeatherDiary</Heading>
