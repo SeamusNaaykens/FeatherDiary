@@ -5,6 +5,8 @@ import {
     Heading
 } from '@chakra-ui/react'
 import { Header } from '../components/Header';
+import { Carousel } from '../components/Carousel/Carousel';
+import { birds } from '../Data/Data'
 
 export const Home = () => {
 
@@ -27,7 +29,9 @@ export const Home = () => {
                             <Heading as='h2' color='#163020'>Achievements</Heading>
                         </Box>
                     </Grid>
+                    <Carousel images={birds} ></Carousel>
                 </Box>
+
             </Grid>
         </main>
     )

@@ -1,0 +1,129 @@
+@use '../../partials/variables' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.carousel {
+    height: 42.1875rem;
+    width: 70%;
+    min-width: 50%;
+
+    &__container {
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+
+    &__cards {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex: 1;
+        overflow: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transform: scale(.8);
+        transition: 0.5s ease-in-out;
+    }
+
+    &__cards--active {
+        opacity: 1;
+        transform: scale(1);
+        pointer-events: visible;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover
+    }
+
+    &__overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 2.5rem 1.875rem;
+    }
+
+
+    &__image__title {
+        color: $grey;
+        font-size: 3rem;
+    }
+
+    &__image__scientific {
+        color: $grey;
+        font-family: "Copy";
+        font-style: italic;
+    }
+
+    &__arrow--left {
+        position: absolute;
+        font-size: 2.5rem;
+        top: 50%;
+        transform: translate(0, -50%);
+        background-color: $light-green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1.875rem;
+        height: 1.875rem;
+        border-radius: 50%;
+        cursor: pointer;
+        left: .9375rem;
+        color: $dark-green;
+    }
+
+    &__arrow--right {
+        position: absolute;
+        font-size: 2.5rem;
+        top: 50%;
+        transform: translate(0, -50%);
+        background-color: $light-green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1.875rem;
+        height: 1.875rem;
+        border-radius: 50%;
+        cursor: pointer;
+        right: .9375rem;
+        color: $dark-green;
+    }
+
+    &__pagination {
+        position: absolute;
+        bottom: .625rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+        background-color: $light-green;
+        border-radius: 20px;
+        padding: .3125rem .625rem .3125rem 0rem
+    }
+
+    &__pagination__dot {
+        height: .625rem;
+        width: .625rem;
+        background-color: $grey;
+        border-radius: 50%;
+        display: inline-block;
+        margin-left: .625rem;
+        cursor: pointer;
+    }
+
+    &__pagination__dot:hover {
+        transform: scale(1.2);
+    }
+
+    &__pagination__dot--active {
+        background-color: $dark-green;
+    }
+}
