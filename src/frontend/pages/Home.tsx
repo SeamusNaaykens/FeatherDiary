@@ -7,6 +7,7 @@ import {
 import { Header } from '../components/Header';
 import { Carousel } from '../components/Carousel/Carousel';
 import { birds } from '../Data/Data'
+import { Link } from 'react-router-dom';
 
 export const Home = () => {
 
@@ -21,15 +22,21 @@ export const Home = () => {
                 <Grid display='flex' justifyContent='space-between'>
                     <Box width='100%'>
                         <Grid>
-                            <Box padding='3rem' border='1px solid #163020' height='14rem' display='flex' alignItems='center' fontSize='2rem'>
-                                <Heading as='h2' color='#163020'>FeatherDiary</Heading>
-                            </Box>
-                            <Box padding='3rem' border='1px solid #163020' height='14rem' display='flex' alignItems='center' fontSize='2rem'>
-                                <Heading as='h2' color='#163020'>BucketList</Heading>
-                            </Box>
-                            <Box padding='3rem' border='1px solid #163020' height='14rem' display='flex' alignItems='center' fontSize='2rem'>
-                                <Heading as='h2' color='#163020'>Achievements</Heading>
-                            </Box>
+                            <Link to='/featherdiary'>
+                                <Box padding='3rem' border='1px solid #163020' height='14rem' display='flex' alignItems='center' fontSize='2rem'>
+                                    <Heading as='h2' color='#163020'>FeatherDiary</Heading>
+                                </Box>
+                            </Link>
+                            <Link to='/bucketlist'>
+                                <Box padding='3rem' border='1px solid #163020' height='14rem' display='flex' alignItems='center' fontSize='2rem'>
+                                    <Heading as='h2' color='#163020'>BucketList</Heading>
+                                </Box>
+                            </Link>
+                            <Link to='/achievements'>
+                                <Box padding='3rem' border='1px solid #163020' height='14rem' display='flex' alignItems='center' fontSize='2rem'>
+                                    <Heading as='h2' color='#163020'>Achievements</Heading>
+                                </Box>
+                            </Link>
                         </Grid>
                     </Box>
                     <Carousel images={birds} ></Carousel>
