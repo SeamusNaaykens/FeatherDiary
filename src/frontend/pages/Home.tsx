@@ -4,7 +4,6 @@ import {
     Grid,
     Heading
 } from '@chakra-ui/react'
-import { Header } from '../components/Header';
 import { Carousel } from '../components/Carousel/Carousel';
 import { birds } from '../Data/Data'
 import { Link } from 'react-router-dom';
@@ -13,7 +12,6 @@ export const Home = () => {
 
     return (
         <main>
-            <Header></Header>
             <Grid backgroundColor='#EEF0E5'>
                 <Grid display='flex' justifyContent='center' flexDirection='column' p='3rem' gap=".5rem">
                     <Heading as='h1' color='#163020' fontSize='3rem'> Welcome to your FeatherDiary!</Heading>
